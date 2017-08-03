@@ -1,0 +1,212 @@
+/************************  FONTS  ***********************/
+@font-face {
+  font-family: stalemate;
+  src: url("../../fonts/Stalemate-Regular.ttf");
+}
+
+
+
+
+/******************  Tags  *******************/
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(244, 204, 174);
+}
+input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+input:focus {
+  outline: none;
+}
+
+
+
+
+
+/************************  HOME PAGE  ***********************/
+.homePage {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(244, 204, 174);
+}
+
+
+
+
+
+/************************  Creation Panel  ***********************/
+.creationPanel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.creationPanel-skin {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(244, 204, 174);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.creationPanel-skin-tattoo {
+  width: 90%;
+  height: 50px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: stalemate;
+  /*border: 1px solid #000;*/
+}
+.creationPanel-toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+.creationPanel-toolbar-font,
+.creationPanel-toolbar-color,
+.creationPanel-toolbar-skincolor {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 100%;
+  border: 1px solid #FFF;
+}
+.creationPanel-toolbar-skincolorPicker {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  right: calc((100% - 100px + 20px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+  transform-origin: 50% 0%;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+  z-index: 2;
+  display: none;
+}
+.skincolorOption {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.creationPanel-toolbar-font {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.creationPanel-toolbar-color {
+  width: 60px;
+  font-size: 0.8rem;
+  text-align: center;
+  border: 0;
+  border-radius: 0;
+}
+.creationPanel-toolbar-skincolor {
+  font-size: 0.8rem;
+}
+.creationPanel-letterAmount {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #FFF;
+  font-size: 2rem;
+  position: absolute;
+  right: 7%;
+  bottom: 30%;
+  transform-origin: center;
+}
+@keyframes notification {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.creationPanel-displayButton {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: #000;
+  position: absolute;
+  right: 7%;
+  bottom: 10%;
+}
+.creationPanel-displayWork {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(244, 204, 174);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  visibility: hidden;
+}
+.creationPanel-displayWork-content {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+.creationPanel-displayWork-close {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #FFF;
+  border-radius: 10%;
+  position: absolute;
+  bottom: 30px;
+  left: calc((100% - 50px) / 2);
+}
+
+
+
+
+
+/************************  Color Picker  ***********************/
+.colorPicker {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+
+
+
+
+/************************  Font Selector  ***********************/
+.fontSelector {
+  width: 200px;
+}
+.fontRadio {
+  width: 20px;
+}

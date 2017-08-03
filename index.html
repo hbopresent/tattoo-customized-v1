@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRANKLIN</title>
+    <!-- <link rel="icon" href="app/view/img/logo.png" type="image/x-icon"> -->
+    <link rel="stylesheet" href="app/styles/css/main.css"/>
+    <link rel="stylesheet" href="app/styles/css/normalize.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.js"></script>
+  </head>
+  <body>
+    <div class="homePage" id="homePage">
+      <div class="creationPanel">
+        <div class="creationPanel-toolbar">
+          <div class="creationPanel-toolbar-font">Ft</div>
+          <input type="button" class="creationPanel-toolbar-skincolor" id="skincolor" value="skin" readonly autocomplete="off" />
+          <div class="creationPanel-toolbar-skincolorPicker" id="skincolorPicker">
+            <div class="skincolorOption" id="color0" style="background-color:rgb(255, 223, 196)"></div>
+            <div class="skincolorOption" id="color1" style="background-color:rgb(255, 223, 178)"></div>
+            <div class="skincolorOption" id="color2" style="background-color:rgb(235, 178, 133)"></div>
+            <div class="skincolorOption" id="color3" style="background-color:rgb(229, 184, 143)"></div>
+          </div>
+          <input type="button" class="creationPanel-toolbar-color jscolor {onFineChange:'setTextColor(this)'}"
+                 id="colorSelector" value="000000" readonly autocomplete="off"></input>
+        </div>
+        <div class="creationPanel-skin" id="creationPanelSkin">
+          <input type="text" class="creationPanel-skin-tattoo" id="creationPanelTattoo" placeholder="Create It!" maxlength="20"/>
+        </div>
+        <input type="text" class="creationPanel-letterAmount" id="letterAmount" readonly autocomplete="off" value="20"/>
+        <div class="creationPanel-displayButton" id="displayButton">Take a look</div>
+        <div class="creationPanel-displayWork" id="displayWork">
+          <input type="text" class="creationPanel-displayWork-content" id="displayWorkContent" readonly/>
+          <button class="creationPanel-displayWork-close" id="displayWorkClose"></button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function setTextColor(picker) {
+        document.getElementById("creationPanelTattoo").style.color = '#' + picker.toString();
+      }
+
+      // var stalemateFont = document.getElementById("stalemateFont");
+      // stalemateFont.addEventListener("click", changeFont);
+
+      // function changeFont() {
+      //   if(stalemateFont.checked == true) {
+      //     document.getElementById("creationPanelTattoo").style.fontFamily = "stalemate";
+      //   }
+      // }
+    </script>
+    <script src="app/scripts/library/jscolor.min.js"></script>
+    <script src="app/scripts/frontend/main.js"></script>
+  </body>
+</html>
