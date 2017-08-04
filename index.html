@@ -12,28 +12,56 @@
   <body>
     <div class="homePage" id="homePage">
       <div class="creationPanel">
+        <!-- tool bar -->
         <div class="creationPanel-toolbar">
-          <div class="creationPanel-toolbar-font">Ft</div>
-          <input type="button" class="creationPanel-toolbar-skincolor" id="skincolor" value="skin" readonly autocomplete="off" />
+          <div class="creationPanel-toolbar-item creationPanel-toolbar-skincolor" id="toolbarSkincolor" style="background-color: rgb(0, 0, 0)">Skin</div>
+          <div class="creationPanel-toolbar-item creationPanel-toolbar-font" id="toolbarFont" style="font-family:serif">Font</div>
+          <input type="button" class="creationPanel-toolbar-item creationPanel-toolbar-color jscolor {onFineChange:'setTextColor(this)'}"
+                 id="colorSelector" value="000000" readonly autocomplete="off"></input>
+
+          <!-- skin color picker -->
           <div class="creationPanel-toolbar-skincolorPicker" id="skincolorPicker">
             <div class="skincolorOption" id="color0" style="background-color:rgb(255, 223, 196)"></div>
             <div class="skincolorOption" id="color1" style="background-color:rgb(255, 223, 178)"></div>
             <div class="skincolorOption" id="color2" style="background-color:rgb(235, 178, 133)"></div>
             <div class="skincolorOption" id="color3" style="background-color:rgb(229, 184, 143)"></div>
           </div>
-          <input type="button" class="creationPanel-toolbar-color jscolor {onFineChange:'setTextColor(this)'}"
-                 id="colorSelector" value="000000" readonly autocomplete="off"></input>
+          <!-- font list -->
+          <div class="creationPanel-toolbar-fontList" id="fontList">
+            <div class="creationPanel-toolbar-fontList-item" id="font0" style="font-family:stalemate">Font</div>
+            <div class="creationPanel-toolbar-fontList-item" id="font1" style="font-family:sacramento">Font</div>
+            <div class="creationPanel-toolbar-fontList-item" id="font2" style="font-family:afterdark">Font</div>
+            <div class="creationPanel-toolbar-fontList-item" id="font3" style="font-family:notera">Font</div>
+            <div class="creationPanel-toolbar-fontList-item" id="font4" style="font-family:leaguescript">Font</div>
+          </div>
         </div>
+
+
+
+
         <div class="creationPanel-skin" id="creationPanelSkin">
-          <input type="text" class="creationPanel-skin-tattoo" id="creationPanelTattoo" placeholder="Create It!" maxlength="20"/>
+          <input type="text" class="creationPanel-skin-tattoo" id="creationPanelTattoo" placeholder="Write here!" maxlength="25"/>
         </div>
-        <input type="text" class="creationPanel-letterAmount" id="letterAmount" readonly autocomplete="off" value="20"/>
-        <div class="creationPanel-displayButton" id="displayButton">Take a look</div>
+        <input type="text" class="creationPanel-letterAmount" id="letterAmount" readonly autocomplete="off" value="25"/>
+        <!-- <div class="creationPanel-displayButton" id="displayButton">Take a look</div>
         <div class="creationPanel-displayWork" id="displayWork">
           <input type="text" class="creationPanel-displayWork-content" id="displayWorkContent" readonly/>
           <button class="creationPanel-displayWork-close" id="displayWorkClose"></button>
-        </div>
+        </div> -->
       </div>
+
+      <footer>
+        <div class="footer-navbar">
+          <div class="footer-navbar-item">About</div>
+          <a class="footer-navbar-item" href="https://www.instagram.com/franklin__hung/" target="_blank">
+            <div>Instagram</div>
+          </a>
+          <a class="footer-navbar-item" href="https://www.facebook.com/messages/t/ChengHungFranklin" target="_blank">
+            <div>Messenger</div>
+          </a>
+          <div class="footer-navbar-item">Line</div>
+        </div>
+      </footer>
     </div>
     <script>
       function setTextColor(picker) {

@@ -3,6 +3,22 @@
   font-family: stalemate;
   src: url("../../fonts/Stalemate-Regular.ttf");
 }
+@font-face {
+  font-family: sacramento;
+  src: url("../../fonts/Sacramento-Regular.ttf");
+}
+@font-face {
+  font-family: afterdark;
+  src: url("../../fonts/AfterDark BB Regular.otf");
+}
+@font-face {
+  font-family: notera;
+  src: url("../../fonts/Notera_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: leaguescript;
+  src: url("../../fonts/LeagueScript.ttf");
+}
 
 
 
@@ -18,10 +34,20 @@ input {
   border: 0;
   margin: 0;
   padding: 0;
+  border-radius: 0;
   background-color: transparent;
 }
 input:focus {
   outline: none;
+}
+footer {
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  bottom: 0%;
+}
+a {
+  text-decoration: none;
 }
 
 
@@ -35,9 +61,9 @@ input:focus {
   background-color: #FFF;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
   background-color: rgb(244, 204, 174);
 }
 
@@ -60,80 +86,137 @@ input:focus {
   align-items: center;
 }
 .creationPanel-skin-tattoo {
-  width: 90%;
-  height: 50px;
+  width: 95%;
+  height: 100px;
   text-align: center;
-  font-size: 3rem;
-  font-family: stalemate;
-  /*border: 1px solid #000;*/
+  font-size: 4rem;
+  font-family: sans-serif;
 }
+.creationPanel-toolbar-closeButton {
+  width: 10%;
+  height: 50px;
+  font-size: 1rem;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/closeWhite.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+
+
+
 .creationPanel-toolbar {
   width: 100%;
+  height: 40px;
+  display: flex;
+  /*justify-content: center;
+  align-items: center;*/
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow: scroll;
+  background-color: #000;
+}
+.creationPanel-toolbar-item {
+  width: 33.3%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 30px;
-  left: 0px;
+  text-align: center;
+  /*font-family: serif;*/
+  /*border-right: 1px solid #000;*/
 }
-.creationPanel-toolbar-font,
-.creationPanel-toolbar-color,
+
+
+
+/* toolbar ==> font */
+.creationPanel-toolbar-font {
+  font-size: 2.5rem;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.creationPanel-toolbar-fontList {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  left: 0%;
+  top: -60px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  transition: top 0.2s ease;
+  background-color: #000;
+}
+.creationPanel-toolbar-fontList-item {
+  width: 20%;
+  height: 50px;
+  font-size: 2.5rem;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #FFF;
+}
+
+
+
+
+/* toolbar ==> text color */
+.creationPanel-toolbar-color {
+  font-size: 1.25rem;
+  text-align: center;
+  display: block;
+  justify-content: none;
+  align-items: none;
+  border-right: 0;
+  font-family: serif;
+}
+
+
+
+/* toolbar ==> skin color */
 .creationPanel-toolbar-skincolor {
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 100%;
-  border: 1px solid #FFF;
+  font-size: 1rem;
+  color: #FFF;
 }
 .creationPanel-toolbar-skincolorPicker {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 0px;
-  right: calc((100% - 100px + 20px) / 2);
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: -60px;
+  left: 0px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
   background-color: #000;
-  transform-origin: 50% 0%;
-  transform: scale(0);
-  transition: transform 0.2s ease;
   z-index: 2;
-  display: none;
+  transition: top 0.2s ease;
 }
 .skincolorOption {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
+  width: 25%;
+  height: 50px;
 }
-.creationPanel-toolbar-font {
-  font-size: 0.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.creationPanel-toolbar-color {
-  width: 60px;
-  font-size: 0.8rem;
-  text-align: center;
-  border: 0;
-  border-radius: 0;
-}
-.creationPanel-toolbar-skincolor {
-  font-size: 0.8rem;
-}
+
+
+
+
 .creationPanel-letterAmount {
   width: 40px;
   height: 40px;
   text-align: center;
-  color: #FFF;
+  color: #000;
   font-size: 2rem;
   position: absolute;
   right: 7%;
-  bottom: 30%;
+  top: 28%;
   transform-origin: center;
+  font-family: serif;
 }
 @keyframes notification {
   0% {
@@ -192,21 +275,55 @@ input:focus {
 
 
 
-/************************  Color Picker  ***********************/
-.colorPicker {
-  width: 30px;
+/************************  Footer  ***********************/
+.footer-navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #000;
+}
+.footer-navbar-item {
+  width: 25%;
   height: 30px;
-  border-radius: 5px;
+  color: #FFF;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
 
 
-/************************  Font Selector  ***********************/
-.fontSelector {
-  width: 200px;
+
+/************************  SCREEN BREAKPOINT  ***********************/
+@media only screen and (max-width: 575px) {
+  .creationPanel-skin-tattoo {
+    font-size: 2rem;
+  }
+  /*.creationPanel-toolbar-skincolor {
+    font-size: 0.8rem;
+  }*/
+  .creationPanel-toolbar-font {
+    font-size: 0.8rem;
+  }
+  .creationPanel-toolbar-fontList-item {
+    font-size: 1.5rem;
+  }
+  .footer-navbar-item {
+    font-size: 0.8rem;
+  }
 }
-.fontRadio {
-  width: 20px;
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+
+}
+@media only screen and (min-width: 1200px) {
+
 }
