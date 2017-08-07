@@ -16,6 +16,14 @@ function Creation() {
   // creation panel
   this.creationPanelSkin = document.getElementById("creationPanelSkin");
   this.creationPanelTattoo = document.getElementById("creationPanelTattoo");
+  // About page
+  this.footerAbout = document.getElementById("footerAbout");
+  this.homePageAbout = document.getElementById("homePageAbout");
+  this.aboutTextEn = document.getElementById("aboutTextEn");
+  this.aboutTextCh = document.getElementById("aboutTextCh");
+  this.aboutCloser = document.getElementById("aboutCloser");
+  this.changeLan = document.getElementById("changeLan");
+  this.aboutLan = "En";
   // show the work
   // this.displayWork = document.getElementById("displayWork");
   // this.displayWorkContent = document.getElementById("displayWorkContent");
@@ -25,6 +33,7 @@ function Creation() {
 
 Creation.prototype = {
   init: function() {
+    this.changeLan.innerHTML = "En";
     if(this.toolbarFontFlag == false) {
       this.toolbarFont.style.fontSize = "1rem";
     }
@@ -55,6 +64,33 @@ Creation.prototype = {
     });
     // set focus listener on creationPanelTattoo
     this.creationPanelTattoo.addEventListener("focus", this.setTextFont.bind(Creation));
+
+    // about listener
+    this.footerAbout.addEventListener("click", function() {
+      work.homePageAbout.style.display = "block";
+    });
+    this.aboutCloser.addEventListener("click", function() {
+      work.homePageAbout.style.display = "none";
+    });
+    this.changeLan.addEventListener("click", function() {
+      console.log(work.changeLan.innerHTML);
+      if(work.aboutLan == "En") {
+        console.log("fuck");
+        work.aboutLan = "繁";
+        work.changeLan.innerHTML = "繁"
+        work.aboutTextEn.style.display = "none";
+        work.aboutTextCh.style.display = "block";
+        return;
+      }
+      if(work.aboutLan == "繁") {
+        console.log("shit");
+        work.aboutLan = "En";
+        work.changeLan.innerHTML = "En";
+        work.aboutTextEn.style.display = "block";
+        work.aboutTextCh.style.display = "none";
+        return;
+      }
+    });
   },
   openFontList: function() {
     work.fontList.style.top = "0px";
@@ -64,6 +100,7 @@ Creation.prototype = {
   },
   openSkincolorPicker: function() {
     work.skincolorPicker.style.top = "0px";
+    work.toolbarSkincolor.style.color = "#000";
   },
   closeSkincolorPicker: function() {
     work.skincolorPicker.style.top = "-60px";
@@ -96,11 +133,12 @@ Creation.prototype = {
   countingLetters: function() {
     if(work.letterAmount.value > 0) {
       work.letterAmount.value = (25 - (work.creationPanelTattoo.value.length));
+      console.log("work.letterAmount.value: " + work.letterAmount.value);
     }
     else {
       work.letterAmount.style.animation = "notification 0.2s ease forwards";
     }
-  },
+  }
   // showTheWork: function() {
   //   work.displayWorkContent.value = work.creationPanelTattoo.value;
   //   work.displayWorkContent.style.color = work.creationPanelTattoo.style.color;

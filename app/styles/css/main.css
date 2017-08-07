@@ -1,34 +1,10 @@
-/************************  FONTS  ***********************/
-@font-face {
-  font-family: stalemate;
-  src: url("../../fonts/Stalemate-Regular.ttf");
-}
-@font-face {
-  font-family: sacramento;
-  src: url("../../fonts/Sacramento-Regular.ttf");
-}
-@font-face {
-  font-family: afterdark;
-  src: url("../../fonts/AfterDark BB Regular.otf");
-}
-@font-face {
-  font-family: notera;
-  src: url("../../fonts/Notera_PersonalUseOnly.ttf");
-}
-@font-face {
-  font-family: leaguescript;
-  src: url("../../fonts/LeagueScript.ttf");
-}
-
-
-
-
 /******************  Tags  *******************/
 body,
 html {
   width: 100vw;
   height: 100vh;
   background-color: rgb(244, 204, 174);
+  overflow: hidden;
 }
 input {
   border: 0;
@@ -48,6 +24,9 @@ footer {
 }
 a {
   text-decoration: none;
+}
+header {
+  width: 100%;
 }
 
 
@@ -70,6 +49,18 @@ a {
 
 
 
+/************************  HEADER  ***********************/
+.header-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-navbar h1{
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: SF-display-regular;
+}
 
 /************************  Creation Panel  ***********************/
 .creationPanel {
@@ -90,7 +81,7 @@ a {
   height: 100px;
   text-align: center;
   font-size: 4rem;
-  font-family: sans-serif;
+  font-family: SF-display-light;
 }
 .creationPanel-toolbar-closeButton {
   width: 10%;
@@ -113,8 +104,6 @@ a {
   width: 100%;
   height: 40px;
   display: flex;
-  /*justify-content: center;
-  align-items: center;*/
   position: fixed;
   top: 0px;
   left: 0px;
@@ -128,8 +117,8 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /*font-family: serif;*/
-  /*border-right: 1px solid #000;*/
+  font-family: SF-display-ultralight;
+  cursor: pointer;
 }
 
 
@@ -216,7 +205,7 @@ a {
   right: 7%;
   top: 28%;
   transform-origin: center;
-  font-family: serif;
+  font-family: SF-text-regular;
 }
 @keyframes notification {
   0% {
@@ -290,6 +279,82 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  font-family: SF-display-ultralight;
+}
+
+
+
+
+
+/************************  ABOUT  ***********************/
+.homePage-about {
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: #FFF;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  display: none;
+}
+.homePage-about-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.homePage-about-top-title,
+.homePage-about-top-language {
+  font-family: SF-display-Thin;
+}
+.homePage-about-top-title {
+  font-size: 2rem;
+}
+.homePage-about-top-language {
+  color: #FFF;
+  font-size: 1rem;
+  background-color: #000;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homePage-about-text-en,
+.homePage-about-text-ch {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.homePage-about-text-ch {
+  display: none;
+}
+.inner-text {
+  font-size: 1rem;
+  font-family: SF-text-light;
+  line-height: 1.5rem;
+}
+.homePage-about-text-en-second {
+  /*margin-top: 50px;*/
+}
+.homePage-about-close {
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  position: absolute;
+  bottom: 30px;
+  left: calc((100% - 30px) / 2);
+}
+.homePage-about-closeBar {
+  position: absolute;
+  left: 14px;
+  top: 5px;
+  width: 2px;
+  height: 20px;
+  background-color: #FFF;
 }
 
 

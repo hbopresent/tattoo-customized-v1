@@ -1,0 +1,49 @@
+/************************  WEB FONTS -- Display  ***********************/
+@font-face {
+  font-family: SF-display-regular;
+  src: url("../../fonts/displayFonts/SanFranciscoDisplay-Regular.otf");
+}
+@font-face {
+  font-family: SF-display-light;
+  src: url("../../fonts/displayFonts/SanFranciscoDisplay-Light.otf");
+}
+@font-face {
+  font-family: SF-display-ultralight;
+  src: url("../../fonts/displayFonts/SanFranciscoDisplay-Ultralight.otf");
+}
+@font-face {
+  font-family: SF-display-thin;
+  src: url("../../fonts/displayFonts/SanFranciscoDisplay-Thin.otf");
+}
+
+/************************  WEB FONTS -- Text  ***********************/
+@font-face {
+  font-family: SF-text-light;
+  src: url("../../fonts/textFonts/SanFranciscoText-Light.otf");
+}
+@font-face {
+  font-family: SF-text-regular;
+  src: url("../../fonts/textFonts/SanFranciscoText-Regular.otf");
+}
+
+/************************  CUSTOMIZATION TEXT FONTS  ***********************/
+@font-face {
+  font-family: stalemate;
+  src: url("../../fonts/customizationFonts/Stalemate-Regular.ttf");
+}
+@font-face {
+  font-family: sacramento;
+  src: url("../../fonts/customizationFonts/Sacramento-Regular.ttf");
+}
+@font-face {
+  font-family: afterdark;
+  src: url("../../fonts/customizationFonts/AfterDark BB Regular.otf");
+}
+@font-face {
+  font-family: notera;
+  src: url("../../fonts/customizationFonts/Notera_PersonalUseOnly.ttf");
+}
+@font-face {
+  font-family: leaguescript;
+  src: url("../../fonts/customizationFonts/LeagueScript.ttf");
+}
