@@ -24,6 +24,14 @@ function Creation() {
   this.aboutCloser = document.getElementById("aboutCloser");
   this.changeLan = document.getElementById("changeLan");
   this.aboutLan = "En";
+  // Line Code
+  this.footerLine = document.getElementById("footerLine");
+  this.homePageLineCode = document.getElementById("homePageLineCode");
+  this.lineCodeCloser = document.getElementById("lineCodeCloser");
+
+
+
+
   // show the work
   // this.displayWork = document.getElementById("displayWork");
   // this.displayWorkContent = document.getElementById("displayWorkContent");
@@ -90,6 +98,14 @@ Creation.prototype = {
         work.aboutTextCh.style.display = "none";
         return;
       }
+    });
+
+    // Line Code listener
+    this.footerLine.addEventListener("click", function() {
+      work.homePageLineCode.style.display = "flex";
+    });
+    this.lineCodeCloser.addEventListener("click", function() {
+      work.homePageLineCode.style.display = "none";
     });
   },
   openFontList: function() {

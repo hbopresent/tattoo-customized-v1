@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="app/styles/css/normalize.css"/>
     <link rel="stylesheet" href="app/styles/css/fontStyle.css"/>
     <link rel="stylesheet" href="app/styles/css/main.css"/>
+    <link rel="stylesheet" href="app/styles/css/screenSize.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.js"></script>
   </head>
   <body>
@@ -37,9 +38,9 @@
           </div>
         </div>
         <div class="creationPanel-skin" id="creationPanelSkin">
-          <input type="text" class="creationPanel-skin-tattoo" id="creationPanelTattoo" placeholder="Write here!" maxlength="25"/>
+          <input type="text" class="creationPanel-skin-tattoo" id="creationPanelTattoo" placeholder="Write here!" maxlength="25" autocomplete="off" spellcheck="false" autocorrect="off"/>
         </div>
-        <input type="text" class="creationPanel-letterAmount" id="letterAmount" readonly autocomplete="off" value="25"/>
+        <input type="text" class="creationPanel-letterAmount" id="letterAmount" readonly autocomplete="off" value="25" contenteditable="false"/>
         <!-- <div class="creationPanel-displayButton" id="displayButton">Take a look</div>
         <div class="creationPanel-displayWork" id="displayWork">
           <input type="text" class="creationPanel-displayWork-content" id="displayWorkContent" readonly/>
@@ -55,36 +56,86 @@
           <a class="footer-navbar-item" href="https://www.facebook.com/messages/t/ChengHungFranklin" target="_blank">
             <div>Messenger</div>
           </a>
-          <div class="footer-navbar-item">Line</div>
+          <div class="footer-navbar-item" id="footerLine">Line</div>
         </div>
       </footer>
       <!-- About page -->
       <div class="homePage-about" id="homePageAbout">
-        <div class="homePage-about-top">
-          <h1 class="homePage-about-top-title">FRANKLIN</h1>
-          <div class="homePage-about-top-language" id="changeLan"></div>
+        <div class="homePage-about-wrap">
+          <div class="homePage-about-top">
+            <h1 class="homePage-about-top-title">FRANKLIN</h1>
+            <div class="homePage-about-top-language" id="changeLan"></div>
+          </div>
+          <!-- English version -->
+          <div class="homePage-about-text-en" id="aboutTextEn">
+            <article class="homePage-about-article">
+              <h2 class="homePage-about-article-title">Vision</h2>
+              <p class="inner-text">
+                FRANKLIN makes people design temporary tattoos with your innovation, imagination and style.
+              </p>
+              <p class="inner-text">
+                Our vision is to encourage people to live life confidently and courageously everyday.
+              </p>
+            </article>
+            <article class="homePage-about-article" style="margin-top:50px">
+              <h2 class="homePage-about-article-title">How it works</h2>
+              <p class="inner-text">
+                <ol>
+                  <li class="inner-text">choose skin, font, text color and type words</li>
+                  <li class="inner-text">take screenshot</li>
+                  <li class="inner-text">sen it to me on social media</li>
+                </ol>
+              </p>
+              <p class="inner-text" style="margin-top:10px">
+                <strong>
+                  width: shorter than 13cm<br>
+                  height: 1.2cm ~ 2cm <br>
+                  size depends on content and font
+                </strong>
+              </p>
+            </article>
+          </div>
+          <!-- Chinese version -->
+          <div class="homePage-about-text-ch" id="aboutTextCh">
+            <article class="homePage-about-article">
+              <h2 class="homePage-about-article-title">願景</h2>
+              <p class="inner-text">
+                FRANKLIN激發你的創意與想像，只設計自己想要的紋身貼。
+              </p>
+              <p class="inner-text">
+                FRANKLIN的願景是「傳遞充滿自信及勇氣的生活態度」
+              </p>
+            </article>
+            <article class="homePage-about-article" style="margin-top:50px">
+              <h2 class="homePage-about-article-title">怎做</h2>
+              <p class="inner-text">
+                <ol>
+                  <li class="inner-text">選擇膚色/字型/文字顏色，然後打些字</li>
+                  <li class="inner-text">螢幕截圖</li>
+                  <li class="inner-text">將照片傳給我(line/messenger)</li>
+                </ol>
+              </p>
+              <p class="inner-text" style="margin-top:10px">
+                <strong>
+                  寬: 小於13cm<br>
+                  高: 1.2cm ~ 2cm <br>
+                  內容與字體決定尺寸
+                </strong>
+              </p>
+            </article>
+          </div>
+          <div class="homePage-about-close" id="aboutCloser">
+            <span class="homePage-about-closeBar" style="transform: rotateZ(45deg)"></span>
+            <span class="homePage-about-closeBar" style="transform: rotateZ(-45deg)"></span>
+          </div>
         </div>
-        <!-- English version -->
-        <div class="homePage-about-text-en" id="aboutTextEn">
-          <p class="inner-text homePage-about-text-en-first">
-            FRANKLIN makes people design temporary tattoos with your innovation, imagination and style.
-          </p>
-          <p class="inner-text homePage-about-text-en-second">
-            Our vision is to encourage people to live life confidently and courageously everyday.
-          </p>
-        </div>
-        <!-- Chinese version -->
-        <div class="homePage-about-text-ch" id="aboutTextCh">
-          <p class="inner-text homePage-about-text-ch-first">
-            FRANKLIN激發你的創意與想像，只設計自己想要的紋身貼。
-          </p>
-          <p class="inner-text homePage-about-text-ch-second">
-            FRANKLIN的願景是「傳遞充滿自信及勇氣的生活態度」"
-          </p>
-        </div>
-        <div class="homePage-about-close" id="aboutCloser">
-          <span class="homePage-about-closeBar" style="transform: rotateZ(45deg)"></span>
-          <span class="homePage-about-closeBar" style="transform: rotateZ(-45deg)"></span>
+      </div>
+      <!-- line code -->
+      <div class="homePage-lineCode" id="homePageLineCode">
+        <div class="homePage-lineCode-img"></div>
+        <div class="homePage-lineCode-close" id="lineCodeCloser">
+          <span class="homePage-lineCode-closeBar" style="transform: rotateZ(45deg)"></span>
+          <span class="homePage-lineCode-closeBar" style="transform: rotateZ(-45deg)"></span>
         </div>
       </div>
     </div>

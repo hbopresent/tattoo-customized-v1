@@ -1,0 +1,53 @@
+/************************  SCREEN BREAKPOINT  ***********************/
+@media only screen and (max-width: 575px) {
+  .creationPanel-skin-tattoo {
+    font-size: 2rem;
+  }
+  .creationPanel-toolbar-font {
+    font-size: 0.8rem;
+  }
+  .creationPanel-toolbar-fontList-item {
+    font-size: 1.5rem;
+  }
+  .footer-navbar-item {
+    font-size: 0.8rem;
+  }
+  .inner-text {
+    font-size: 0.8rem;
+  }
+  .creationPanel-letterAmount {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .homePage-about-wrap {
+    width: 70vw;
+  }
+  .inner-text {
+    line-height: 1.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .homePage-about-wrap {
+    width: 60vw;
+  }
+  .inner-text {
+    line-height: 1.5rem;
+  }
+}
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+  .homePage-about-wrap {
+    width: 50vw;
+  }
+  .inner-text {
+    line-height: 1.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .homePage-about-wrap {
+    width: 50vw;
+  }
+  .inner-text {
+    line-height: 1.5rem;
+  }
+}
