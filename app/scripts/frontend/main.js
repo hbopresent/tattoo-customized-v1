@@ -23,7 +23,7 @@ function Creation() {
   this.aboutTextCh = document.getElementById("aboutTextCh");
   this.aboutCloser = document.getElementById("aboutCloser");
   this.changeLan = document.getElementById("changeLan");
-  this.aboutLan = "En";
+  this.aboutLan = "繁";
   // Line Code
   this.footerLine = document.getElementById("footerLine");
   this.homePageLineCode = document.getElementById("homePageLineCode");
@@ -41,7 +41,7 @@ function Creation() {
 
 Creation.prototype = {
   init: function() {
-    this.changeLan.innerHTML = "En";
+    this.changeLan.innerHTML = "繁";
     if(this.toolbarFontFlag == false) {
       this.toolbarFont.style.fontSize = "1rem";
     }
@@ -81,9 +81,7 @@ Creation.prototype = {
       work.homePageAbout.style.display = "none";
     });
     this.changeLan.addEventListener("click", function() {
-      console.log(work.changeLan.innerHTML);
       if(work.aboutLan == "En") {
-        console.log("fuck");
         work.aboutLan = "繁";
         work.changeLan.innerHTML = "繁"
         work.aboutTextEn.style.display = "none";
@@ -91,7 +89,6 @@ Creation.prototype = {
         return;
       }
       if(work.aboutLan == "繁") {
-        console.log("shit");
         work.aboutLan = "En";
         work.changeLan.innerHTML = "En";
         work.aboutTextEn.style.display = "block";
@@ -149,7 +146,6 @@ Creation.prototype = {
   countingLetters: function() {
     if(work.letterAmount.value > 0) {
       work.letterAmount.value = (25 - (work.creationPanelTattoo.value.length));
-      console.log("work.letterAmount.value: " + work.letterAmount.value);
     }
     else {
       work.letterAmount.style.animation = "notification 0.2s ease forwards";

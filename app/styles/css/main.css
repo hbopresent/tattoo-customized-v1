@@ -131,12 +131,9 @@ h1,h2,h3,h4,h5,h6 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: SF-display-ultralight;
+  font-family: SF-display-light;
   cursor: default;
 }
-
-
-
 /* toolbar ==> font */
 .creationPanel-toolbar-font {
   font-size: 2.5rem;
@@ -168,10 +165,9 @@ h1,h2,h3,h4,h5,h6 {
   border-right: 1px solid #FFF;
   cursor: default;
 }
-
-
-
-
+.creationPanel-toolbar-fontList-item:last-child {
+  border-right: 0;
+}
 /* toolbar ==> text color */
 .creationPanel-toolbar-color {
   font-size: 1.25rem;
@@ -182,9 +178,6 @@ h1,h2,h3,h4,h5,h6 {
   border-right: 0;
   font-family: serif;
 }
-
-
-
 /* toolbar ==> skin color */
 .creationPanel-toolbar-skincolor {
   font-size: 1rem;
@@ -295,7 +288,8 @@ h1,h2,h3,h4,h5,h6 {
   justify-content: center;
   align-items: center;
   cursor: default;
-  font-family: SF-display-ultralight;
+  font-family: SF-display-light;
+  /*font-family: SF-display-ultralight;*/
 }
 
 
@@ -336,15 +330,35 @@ h1,h2,h3,h4,h5,h6 {
 .homePage-about-top-title {
   font-size: 2rem;
 }
+.homePage-about-top-option {
+  width: 70px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+}
 .homePage-about-top-language {
   color: #FFF;
   font-size: 1rem;
-  background-color: #000;
   width: 30px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.homePage-about-close {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.homePage-about-closeBar {
+  position: absolute;
+  left: 14.5px;
+  top: 5px;
+  width: 1px;
+  height: 20px;
+  background-color: #FFF;
 }
 .homePage-about-text-en,
 .homePage-about-text-ch {
@@ -352,7 +366,7 @@ h1,h2,h3,h4,h5,h6 {
   margin-left: auto;
   margin-right: auto;
 }
-.homePage-about-text-ch {
+.homePage-about-text-en {
   display: none;
 }
 .inner-text {
@@ -368,27 +382,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: SF-display-thin;
   margin-bottom: 10px;
 }
-.homePage-about-close {
-  width: 30px;
-  height: 30px;
-  background-color: #000;
-  position: absolute;
-  /*bottom: 10px;*/
-  left: calc((100% - 30px) / 2);
-  margin-top: 30px;
-}
-.homePage-about-closeBar {
-  position: absolute;
-  left: 14px;
-  top: 5px;
-  width: 2px;
-  height: 20px;
-  background-color: #FFF;
-}
-.wrap {
-  width: 100%;
-  height: 100%;
-}
+
 
 
 
@@ -420,8 +414,8 @@ h1,h2,h3,h4,h5,h6 {
   height: 40px;
   background-color: transparent;
   position: absolute;
-  bottom: 20px;
-  left: calc((100% - 40px) / 2);
+  top: 20px;
+  right: 20px;
 }
 .homePage-lineCode-closeBar {
   position: absolute;
