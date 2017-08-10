@@ -24,19 +24,15 @@ function Creation() {
   this.aboutCloser = document.getElementById("aboutCloser");
   this.changeLan = document.getElementById("changeLan");
   this.aboutLan = "繁";
+  // Contact page
+  this.footerContact = document.getElementById("footerContact");
+  this.homePageContact = document.getElementById("homePageContact");
+  this.contactCloser = document.getElementById("contactCloser");
   // Line Code
-  this.footerLine = document.getElementById("footerLine");
+  // this.footerLine = document.getElementById("footerLine");
+  this.contactLine = document.getElementById("contactLine");
   this.homePageLineCode = document.getElementById("homePageLineCode");
   this.lineCodeCloser = document.getElementById("lineCodeCloser");
-
-
-
-
-  // show the work
-  // this.displayWork = document.getElementById("displayWork");
-  // this.displayWorkContent = document.getElementById("displayWorkContent");
-  // this.displayWorkClose = document.getElementById("displayWorkClose");
-  // this.displayButton = document.getElementById("displayButton");
 }
 
 Creation.prototype = {
@@ -60,10 +56,7 @@ Creation.prototype = {
     }
     // check letter amount
     window.addEventListener("keydown", this.countingLetters.bind(Creation));
-    // set display listener
-    // this.displayButton.addEventListener("click", this.showTheWork.bind(Creation));
-    // close displayWork
-    // this.displayWorkClose.addEventListener("click", this.closeTheWork.bind(Creation));
+
     // clear notification animation
     this.letterAmount.addEventListener("animationend", function(e) {
       if(e.animationName === "notification") {
@@ -97,8 +90,16 @@ Creation.prototype = {
       }
     });
 
+    // contact listener
+    this.footerContact.addEventListener("click", function() {
+      work.homePageContact.style.display = "block";
+    });
+    this.contactCloser.addEventListener("click", function() {
+      work.homePageContact.style.display = "none";
+    });
+
     // Line Code listener
-    this.footerLine.addEventListener("click", function() {
+    this.contactLine.addEventListener("click", function() {
       work.homePageLineCode.style.display = "flex";
     });
     this.lineCodeCloser.addEventListener("click", function() {
@@ -133,7 +134,6 @@ Creation.prototype = {
     work.toolbarSkincolor.style.backgroundColor = e.target.style.backgroundColor;
     work.homePage.style.backgroundColor = e.target.style.backgroundColor;
     work.creationPanelSkin.style.backgroundColor = e.target.style.backgroundColor;
-    // work.displayWork.style.backgroundColor = e.target.style.backgroundColor;
     document.getElementsByTagName("body")[0].style.backgroundColor = e.target.style.backgroundColor;
 
     work.closeSkincolorPicker();
@@ -141,7 +141,6 @@ Creation.prototype = {
   updateWork: function() {
     work.displayWork.innerHTML = work.creationPanelTattoo.value;
     work.displayWork.style.color = work.creationPanelTattoo.style.color;
-    // work.countingLetters();
   },
   countingLetters: function() {
     if(work.letterAmount.value > 0) {
@@ -151,16 +150,6 @@ Creation.prototype = {
       work.letterAmount.style.animation = "notification 0.2s ease forwards";
     }
   }
-  // showTheWork: function() {
-  //   work.displayWorkContent.value = work.creationPanelTattoo.value;
-  //   work.displayWorkContent.style.color = work.creationPanelTattoo.style.color;
-  //   work.displayWork.style.visibility = "visible";
-  //   work.displayWork.style.zIndex = 5;
-  // },
-  // closeTheWork: function() {
-  //   work.displayWork.style.visibility = "hidden";
-  //   work.displayWork.style.zIndex = -1;
-  // }
 };
 
 var work = new Creation();
