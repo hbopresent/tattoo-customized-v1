@@ -6,8 +6,7 @@ var io = require("socket.io")(http);
 app.use("/app", express.static(__dirname + "/app/"));
 
 app.get("/", function(req, res) {
-  res.sendfile("newIndex.html");
-  // res.sendfile("index.html");
+  res.sendfile("index.html");
 });
 
 // server port

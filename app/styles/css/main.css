@@ -92,10 +92,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 .creationPanel-skin-tattoo {
   width: 95%;
-  height: 100px;
+  height: 80px;
   text-align: center;
   font-size: 4rem;
   font-family: SF-display-light;
+  border: 1px solid #000;
+  border-radius: 5px;
 }
 .creationPanel-toolbar-closeButton {
   width: 10%;
